@@ -33,7 +33,9 @@
 
 %% 页边距设置
 %added by ltz
-\usepackage[top=3.5cm,headheight=25mm,headsep=3mm,footskip=8mm,bottom=2.5cm,left=2.7cm,right=2.7cm]{geometry}
+%\usepackage[top=3.5cm,headheight=25mm,headsep=3mm,footskip=8mm,bottom=2.5cm,left=2.7cm,right=2.7cm]{geometry}
+\usepackage[top=3cm,headheight=5mm,headsep=4mm,footskip=8mm,bottom=1.8cm,left=2.7cm,right=2.7cm]{geometry}
+
 \parskip 0.5ex plus 0.25ex minus 0.25ex
 %% Command -- Clear Double Page
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
@@ -376,21 +378,21 @@
 
    {\zihao{-3}
      \begin{tabular}{lc}
-      \CAST@label@englishauthor & \CASTunderline[200pt]{\CAST@value@englishauthor}
+      \CAST@label@englishauthor & \CASTunderline[220pt]{\CAST@value@englishauthor}
     \\
-      \CAST@label@englishinstitute &  \CASTunderline[200pt]{\CAST@value@englishinstitute}
+      \CAST@label@englishinstitute &  \CASTunderline[220pt]{\CAST@value@englishinstitute}
     \\
-      \CAST@label@englishadvisor &  \CASTunderline[200pt]{\CAST@value@englishadvisor}
+      \CAST@label@englishadvisor &  \CASTunderline[220pt]{\CAST@value@englishadvisor}
     \\  
-      \CAST@label@englishchairman &   \CASTunderline[200pt]{\CAST@value@englishchairman}
+      \CAST@label@englishchairman &   \CASTunderline[220pt]{\CAST@value@englishchairman}
     \\  
-      \CAST@label@englishdegree &    \CASTunderline[200pt]{\CAST@value@englishdegree}
+      \CAST@label@englishdegree &    \CASTunderline[220pt]{\CAST@value@englishdegree}
     \\  
-      \CAST@label@englishmajor &     \CASTunderline[200pt]{\CAST@value@englishmajor}
+      \CAST@label@englishmajor &     \CASTunderline[220pt]{\CAST@value@englishmajor}
     \\  
-      \CAST@label@englishschool &     \CASTunderline[200pt]{\CAST@value@englishschool}
+      \CAST@label@englishschool &     \CASTunderline[220pt]{\CAST@value@englishschool}
     \\  
-      \CAST@label@englishdate &   \CASTunderline[200pt]{\CAST@value@englishdate}
+      \CAST@label@englishdate &   \CASTunderline[220pt]{\CAST@value@englishdate}
     \end{tabular}}
 
   \end{center} 
@@ -415,7 +417,7 @@
    \setstretch{0.8}   
    \begin{minipage}{em}
         \CAST@value@title
-        \vskip 10mm
+        \vskip 30mm
         \CAST@value@school
    \end{minipage}
    }
@@ -492,15 +494,24 @@
  %{\chapter[\heiti 摘要]{\CAST@value@title\vskip 20pt\CAST@label@abstract}}
  % 不显示论文题目
  {
+  \cleardoublepage
+  \thispagestyle{empty}
   \vspace*{3mm}
   \begin{center}
     { \heiti\zihao{3} \CAST@label@abstract}
   \end{center}
-
-  %\chapter{\CAST@label@abstract}
+  
+   %\chapter{\CAST@label@abstract}
  }
  {}
-
+%下一页从偶数页开始
+ \newcommand\beginatevenpage{
+ \clearpage
+  \if@twoside
+    \thispagestyle{empty}
+    \cleardoublepage
+  \fi
+ } 
  %_ 中文关键词
  \newcommand\keywords[1]{%
    \vspace{2ex}\noindent{\bf \CAST@label@keywords} #1}
@@ -509,6 +520,7 @@
  \newenvironment{englishabstract}
  %{\chapter[\heiti ABSTRACT]{\CAST@value@englishtitle\vskip 20pt\bfseries \CAST@label@englishabstract}}
  {
+  \clearpage
   \vspace*{3mm}
   \begin{center}
     { \bf\zihao{3} \CAST@label@englishabstract}

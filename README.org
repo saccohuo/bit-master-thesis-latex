@@ -1,0 +1,16 @@
+#+TITLE: bit-master-thesis-latex
+#+DATE: <2016-09-29 Thu 17:16>
+#+OPTIONS: ^:{}
+#+OPTIONS: html-postamble:nil
+#+TAGS: Original
+#+LAYOUT: post
+#+CATEGORIES: SoftTech
+
+#+INFOJS_OPT: view:nil toc:t ltoc:nil mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
+* Introduction
+LaTeX template of master thesis for Beijing Institute of Technology.
+* References
+- [[https://code.google.com/archive/p/bit-master-thesis-latex/][bit-master-thesis-latex - Google Code Archive]]
+- [[https://github.com/xmfbit/bit-master-thesis-latex][xmfbit/bit-master-thesis-latex: Automatically exported from code.google.com/p/bit-master-thesis-latex]]
+- [[https://github.com/qiuzhu/BITthesis][qiuzhu/BITthesis: Thesis Template of Beijing Institute of Technology Using LaTeX]]
